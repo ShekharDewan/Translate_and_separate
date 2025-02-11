@@ -63,6 +63,44 @@ Takes the translated files and separates their contents into “business” and 
 
 ---
 
+
+**Installation Instructions for Required Packages**
+
+### **Installing Packages Using Conda (Preferred Method)**
+
+If you are using an existing Conda environment, activate it first:
+```bash
+conda activate your-env-name
+```
+Then, install all required packages:
+```bash
+conda install -c conda-forge openai glob2
+```
+This ensures that all necessary dependencies are installed using Conda.
+
+---
+
+### **Installing Packages Using Pip (Alternative Method)**
+
+If you are not using Conda or prefer pip, install the required packages using:
+```bash
+pip install openai glob2
+```
+This will install the OpenAI API package and the required utilities.
+
+---
+
+### **Verifying Installation**
+After installation, verify that the packages are installed correctly by running:
+```bash
+python -c "import openai, glob"
+```
+If no errors appear, the installation was successful.
+
+Now you are ready to run the programs! 🚀
+
+
+
 **Summary:**  
 1. **First, run the Translation Program** to convert your original files (in `input_files/`) into translated files (in `translated_files/`).  
 2. **Then, run the Conversation Separator Program** to split the translated files into business and personal content, with the outputs saved in `business_conversations/` and `personal_conversations/`.
