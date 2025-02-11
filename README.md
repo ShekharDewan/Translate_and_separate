@@ -3,7 +3,7 @@ Translates text from any language to english (leaving english unchanged), then s
 
 Original Use Case: ChatGPT conversations (voice and text). 
 
-First step is to export them all - use the following: 
+First step is to export them all - use the following if your account doesn't permit it natively (team account is restricted): 
 
 https://github.com/pionxzh/chatgpt-exporter
 
