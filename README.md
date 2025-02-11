@@ -1,5 +1,11 @@
 # Translate_and_separate
-Translates text from any language to english (leaving english unchanged), then separates personal and business requirements
+Translates text from any language to english (leaving english unchanged), then separates personal and business requirements. 
+
+Original Use Case: ChatGPT conversations (voice and text). 
+
+First step is to export them all - use the following: 
+
+https://github.com/pionxzh/chatgpt-exporter
 
 **Remember: Run the translation program first, then run the conversation separator program.**
 
