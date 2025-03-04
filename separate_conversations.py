@@ -32,7 +32,7 @@ class ConversationSeparator:
 
     def separate_conversations(self, content: str, file_ext: str) -> Dict[str, str]:
         """Send text content to OpenAI and get separated conversations."""
-        prompt = f"""Analyze and separate the following text into business and personal conversations. Personal and business bits may be interspersed, weaving back and forth. Your job is to cleanly separate them.
+        prompt = f"""Analyze and separate the following text into business and personal conversations. Personal and business bits may be interspersed, weaving back and forth. Your job is to cleanly separate them. Do not delete or change any content - your job is to merely separate them. Indicate where there was an interruption that separatted the files. 
         Return a JSON object with 'business' and 'personal' keys containing the separated text.
         Do not wrap the JSON in markdown code blocks. Preserve all original formatting.
         File type: {file_ext}
@@ -45,7 +45,7 @@ class ConversationSeparator:
             response = self.client.chat.completions.create(
                 model="gpt-4o",  # Explicitly using gpt-4o as requested
                 messages=[
-                    {"role": "system", "content": "You are a precise text classifier that separates text into business and personal conversations. Respond only with valid JSON."},
+                    {"role": "system", "content": "You are a precise text classifier that separates text into business and personal conversations. You do not delete, change, or summarize. Respond only with valid JSON."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.0,
