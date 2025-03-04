@@ -32,7 +32,7 @@ class ConversationSeparator:
 
     def separate_conversations(self, content: str, file_ext: str) -> Dict[str, str]:
         """Send text content to OpenAI and get separated conversations."""
-        prompt = f"""Analyze and separate the following text into business and personal conversations.
+        prompt = f"""Analyze and separate the following text into business and personal conversations. Personal and business bits may be interspersed, weaving back and forth. Your job is to cleanly separate them.
         Return a JSON object with 'business' and 'personal' keys containing the separated text.
         Do not wrap the JSON in markdown code blocks. Preserve all original formatting.
         File type: {file_ext}
